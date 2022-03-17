@@ -1,0 +1,126 @@
+TDD: Test Driven Development
+----------------------------
+- it is a part of xTreme Programming(XP) practices.
+
+- no matter which programming language you use for development TDD is very Important.
+
+- it is a programming practice and it does help you to improove the code quality.
+
+- In TDD, developers start creating small test cases for every feature based on their initial understanding. 
+
+- The primary intention of this technique is to modify or write new code only if the tests fail. This prevents duplication of test scripts.
+
+
+TDD Definition:
+---------------
+- Test-driven development is a software development process. 
+
+- in TDD process software requirements being converted into test cases before software is fully developed, 
+and tracking all software development by repeatedly testing the software against all test cases.
+
+or
+
+- Test Driven Development (TDD) is a software development practice that focuses on creating unit test cases before developing the actual code. 
+
+
+Benefits of Test Driven Development (TDD)
+-----------------------------------------
+- creation of optimized code.
+
+- Helps developers better analyze and understand client requirements and request clarity when they are not adequately defined.
+
+- The addition and testing of new functionalities become much easier in the latter stages of development.
+
+- Test coverage under TDD is much higher compared to the conventional development models. This is because the TDD focuses on creating tests for each functionality right from the beginning.
+
+- Enhances the productivity of the developer and leads to the development of a codebase that is flexible and easy to maintain.
+
+
+
+TDD is a four step process( Red - Green - Refactor )
+----------------------------------------------------
+Step-1(Red Step): write 'enough' failing test without writing the production code.
+enough - depend on the expertise and experience.
+
+step-2(Green Step): write just enough production code to pass the failing test.
+
+Step-3(refactor step): refactor the code if required. 
+improve the code quality.
+
+Step-4: repeat step-1 to step-3.
+
+
+understand TDD approach towards development by image:
+https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/Screenshot-2020-12-31-at-4.02.29-PM.png
+
+
+Example: simple calculator
+---------------------------
+
+#1st write the test
+def testSum:
+  result = sum ( 10, 20 )
+  if( result == 30 ):
+    print( "TEST PASS" )
+  else:
+    print( "TEST FAIL" )
+    
+    
+# 2nd write the production code
+def sum( a, b ):
+  return a + b
+  
+
+# refactor the code(optional)
+def sum( a, b ):
+  if(type(a) == type(10) and type(b) == type(20)):
+    return a + b
+    
+
+
+developer pain in TDD:
+----------------------
+we can't write the test in thin air
+mean how we will write the test case without source code eg function name 'sum' could be 'add' also.
+or the function sum could be within class also then how we will get all this details
+
+ans: write skeleton code before writing any test and it is perfectly ok in TDD.
+
+example: simple calcultor
+-------------------------
+
+# 1st write the skeleton(not design) of the production code
+class Calculator():
+  def add(self, a, b):
+    pass
+  
+  def sub(self, a, b):
+    pass
+   
+  def mul(self, a, b):
+    pass
+    
+  def div(self, a, b):
+    pass
+
+# write test
+
+# implement the production code
+
+# refactor the code(optional)
+    
+  
+Note: 
+-----
+- here developer have the choice write all test 1st then implement te code or write test for single function and test it and the for 2nd function.
+
+- in TDD there is no concept of -ve or +ve test instead you write the test what you are going to implement.
+
+- the idea of +ve or -ve test only for tester not for developer.
+    
+
+
+References:
+-----------
+concept: https://www.youtube.com/watch?v=tYVSE9nzoB0
+
